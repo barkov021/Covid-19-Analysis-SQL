@@ -1,17 +1,17 @@
 
- -- Looking at death rate in the US 
+ -- Looking at the death rate in the US 
 SELECT Location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 AS DeathPercentage 
 FROM coviddeath
 WHERE location like '%states%';
 
--- Looking at what percentage of populatiuon got COVID
+-- Looking at what percentage of population got COVID
 
 SELECT Location, date, total_cases, population, total_deaths, (total_cases/population)*100 AS PercentOfPopulationInfected
 FROM coviddeath
 WHERE location like '%states%';
 
 
--- Looking at countries  with highest infection rate compared to population 
+-- Looking at countries with the highest infection rate compared to the population 
 
 SELECT Location,  MAX(total_cases) AS HighestInfectionCount, population,  (MAX(total_cases)/population)*100 AS PercentOfPopulationInfected
 FROM coviddeath
