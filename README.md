@@ -24,7 +24,7 @@ SQL, Data cleaning, Data importing
 - group by 
 - sorting 
 - filtering
-
+-runing total
 
 
 ## SQL code
